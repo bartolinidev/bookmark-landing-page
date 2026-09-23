@@ -55,8 +55,6 @@ svg {
   --clr-white: hsl(0, 0%, 100%);
 }
 body {
-  margin: 0;
-  padding: 0;
   -webkit-tap-highlight-color: transparent;
   text-wrap: pretty;
   line-height: 1.5;
