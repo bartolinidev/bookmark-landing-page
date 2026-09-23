@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+}
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ======================================= */
+/* ROOT & BODY & HEADINGS FONTS ========= */
+/* ===================================== */
+:root {
+  --space-base: 4px;
+
+  --clr-primary-blue: hsl(231, 69%, 60%);
+  --clr-primary-red: hsl(0, 94%, 66%);
+
+  --clr-neutral-grayish-blue: hsl(229, 8%, 60%);
+  --clr-neutral-dark-blue: hsl(229, 31%, 21%);
+
+  --clr-white: hsl(0, 0%, 100%);
+}
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-wrap: pretty;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  color: var(--clr-neutral-grayish-blue);
+  background-color: var(--clr-white);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: var(--clr-neutral-dark-blue);
+}
+
+/* ======================================= */
+/* HOVER ================================ */
+/* ===================================== */
+@media (hover: hover) {
+}
+
+/* ======================================= */
+/* RESPONSIVE-MEDIA-QUERIES ============= */
+/* ===================================== */
+@media (min-width: 376px) {
+}
+
+/* ======================================= */
+/* REDUCED-MOTION ======================= */
+/* ===================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
