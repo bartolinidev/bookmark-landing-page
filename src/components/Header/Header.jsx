@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container } from '../Container/Container';
+import { Logo } from './Logo';
 import styles from './Header.module.css';
 
-import logoImg from '../../assets/images/logo-bookmark.svg';
 import iconHamburger from '../../assets/images/icon-hamburger.svg';
 import iconClose from '../../assets/images/icon-close.svg';
 import iconFacebook from '../../assets/images/icon-facebook.svg';
@@ -20,12 +20,29 @@ export function Header() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
+  // Close menu after reaching desktop brakpoint (768px)
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <header className={styles.header}>
       <Container>
         <div className={styles.navWrapper}>
-          <a href="#" className={styles.logo} onClick={closeMenu}>
-            <img src={logoImg} alt="Bookmark Logo" />
+          <a
+            href="#"
+            className={styles.logo}
+            onClick={closeMenu}
+            aria-label="Bookmark Homepage"
+          >
+            <Logo isOpen={isMenuOpen} />
           </a>
 
           <nav
