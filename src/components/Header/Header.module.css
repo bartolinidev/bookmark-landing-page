@@ -60,14 +60,33 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 24px;
+  gap: 0; /* Spacing is controlled by paddind at <li> */
   list-style: none;
+  margin-top: 20px;
+
+  & li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    &:nth-last-child(2) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    &:last-child {
+      border-top: none;
+      margin-top: 24px;
+    }
+  }
 }
 
 .navLink {
+  display: block;
+  width: 100%;
+  padding-block: 20px;
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--clr-white);
   transition: color 0.2s ease;
@@ -78,12 +97,12 @@
 }
 
 .ctaButton {
-  display: inline-block;
+  display: block;
   width: 100%;
-  padding: 12px 32px;
-  font-size: 13px;
+  padding: 14px 32px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
   color: var(--clr-white);
@@ -135,9 +154,25 @@
     flex-direction: row;
     width: auto;
     gap: 48px;
+    margin-top: 0;
+
+    & li {
+      width: auto;
+      border: none !important;
+
+      &:nth-last-child(2) {
+        border: none !important;
+      }
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
   }
 
   .navLink {
+    display: inline;
+    padding-block: 0;
     font-size: 14px;
     letter-spacing: 1.5px;
     color: var(--clr-neutral-dark-blue);
@@ -148,7 +183,11 @@
   }
 
   .ctaButton {
+    display: inline-block;
     width: auto;
+    padding: 12px 32px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
     color: var(--clr-white);
     background-color: var(--clr-primary-red);
     border-color: var(--clr-primary-red);
