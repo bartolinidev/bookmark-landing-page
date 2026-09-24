@@ -1,0 +1,124 @@
+.header {
+  padding-block: 40px;
+}
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  z-index: 101; /* Logo kept over open mobile menu */
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  list-style: none;
+}
+
+.navLink {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--clr-neutral-grayish-blue);
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--clr-primary-red);
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  background-color: var(--clr-primary-red);
+  border: 2px solid var(--clr-primary-red);
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(250, 89, 89, 0.3);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-primary-red);
+}
+
+.socialList {
+  display: none; /* Hidden in desktop view */
+}
+
+.toggleBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+@media (max-width: 767px) {
+  .toggleBtn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(47, 53, 79, 0.95);
+    z-index: 100;
+    padding: 100px 32px 40px;
+  }
+
+  .navOpen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .navLink {
+    color: var(--clr-white);
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border-color: var(--clr-white);
+  }
+
+  .socialList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    width: 100%;
+    & a {
+      display: flex;
+      padding: 8px;
+    }
+  }
+}
