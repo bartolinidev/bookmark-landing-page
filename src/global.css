@@ -23,10 +23,6 @@ html {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: inherit;
-}
-a:visited {
-  color: inherit;
 }
 button {
   cursor: pointer;
