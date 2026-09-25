@@ -11,7 +11,7 @@
 .header__logo {
   display: flex;
   align-items: center;
-  z-index: 101;
+  z-index: 2;
 }
 
 .header__logoSvg {
@@ -36,7 +36,7 @@
   border: none;
   cursor: pointer;
   padding: 8px;
-  z-index: 101;
+  z-index: 2;
 }
 
 .header__nav {
@@ -44,7 +44,7 @@
   position: fixed;
   inset: 0;
   background-color: hsla(229, 25%, 25%, 0.95);
-  z-index: 100;
+  z-index: 1;
   padding: 100px 32px 40px;
 
   &.header__navOpen {
