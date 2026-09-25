@@ -21,7 +21,7 @@
     }
 
     & .header__logoBookmark {
-      fill: rgba(47, 53, 79, 0.95);
+      fill: hsla(229, 25%, 25%, 0.95);
     }
 
     & .header__logoText {
@@ -43,7 +43,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(47, 53, 79, 0.95);
+  background-color: hsla(229, 25%, 25%, 0.95);
   z-index: 100;
   padding: 100px 32px 40px;
 
@@ -68,10 +68,10 @@
 .header__navItem {
   width: 100%;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
 
   &:nth-last-child(2) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
   }
 
   &:last-child {
@@ -133,6 +133,16 @@
   & a {
     display: flex;
     padding: 8px;
+
+    &:hover .header__socialIcon path {
+      fill: var(--clr-primary-red);
+    }
+  }
+}
+
+.header__socialIcon {
+  & path {
+    transition: fill 0.2s ease;
   }
 }
 
@@ -193,7 +203,7 @@
     color: var(--clr-white);
     background-color: var(--clr-primary-red);
     border-color: var(--clr-primary-red);
-    box-shadow: 0 3px 10px rgba(250, 89, 89, 0.3);
+    box-shadow: 0 3px 10px hsla(0, 94%, 66%, 0.3);
 
     &:hover {
       background-color: var(--clr-white);

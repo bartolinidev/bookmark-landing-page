@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Container } from '../Container/Container';
 import { Logo } from './Logo';
+import { IconFacebook, IconTwitter } from '../icons';
 import styles from './Header.module.css';
 
 import iconHamburger from '../../assets/images/icon-hamburger.svg';
 import iconClose from '../../assets/images/icon-close.svg';
-import iconFacebook from '../../assets/images/icon-facebook.svg';
-import iconTwitter from '../../assets/images/icon-twitter.svg';
 
 const NAV_LINKS = [
   { name: 'Features', href: '#features' },
@@ -20,7 +19,6 @@ export function Header() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Close menu after reaching desktop breakpoint (768px)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -84,7 +82,7 @@ export function Header() {
                   rel="noopener noreferrer"
                   aria-label="Facebook"
                 >
-                  <img src={iconFacebook} alt="" aria-hidden="true" />
+                  <IconFacebook />
                 </a>
               </li>
               <li className={styles.header__socialItem}>
@@ -94,7 +92,7 @@ export function Header() {
                   rel="noopener noreferrer"
                   aria-label="Twitter"
                 >
-                  <img src={iconTwitter} alt="" aria-hidden="true" />
+                  <IconTwitter />
                 </a>
               </li>
             </ul>
