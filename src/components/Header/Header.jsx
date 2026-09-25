@@ -20,7 +20,7 @@ export function Header() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Close menu after reaching desktop brakpoint (768px)
+  // Close menu after reaching desktop breakpoint (768px)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -35,10 +35,10 @@ export function Header() {
   return (
     <header className={styles.header}>
       <Container>
-        <div className={styles.navWrapper}>
+        <div className={styles.header__wrapper}>
           <a
             href="#"
-            className={styles.logo}
+            className={styles.header__logo}
             onClick={closeMenu}
             aria-label="Bookmark Homepage"
           >
@@ -47,25 +47,27 @@ export function Header() {
 
           <nav
             id="main-nav"
-            className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}
+            className={`${styles.header__nav} ${
+              isMenuOpen ? styles.header__navOpen : ''
+            }`}
             aria-label="Main navigation"
           >
-            <ul className={styles.navList}>
+            <ul className={styles.header__navList}>
               {NAV_LINKS.map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className={styles.header__navItem}>
                   <a
                     href={link.href}
-                    className={styles.navLink}
+                    className={styles.header__navLink}
                     onClick={closeMenu}
                   >
                     {link.name}
                   </a>
                 </li>
               ))}
-              <li>
+              <li className={styles.header__navItem}>
                 <a
                   href="#login"
-                  className={styles.ctaButton}
+                  className={styles.header__ctaButton}
                   onClick={closeMenu}
                 >
                   Login
@@ -74,8 +76,8 @@ export function Header() {
             </ul>
 
             {/* Social Media Icons (Mobile Only) */}
-            <ul className={styles.socialList}>
-              <li>
+            <ul className={styles.header__socialList}>
+              <li className={styles.header__socialItem}>
                 <a
                   href="https://facebook.com"
                   target="_blank"
@@ -85,7 +87,7 @@ export function Header() {
                   <img src={iconFacebook} alt="" aria-hidden="true" />
                 </a>
               </li>
-              <li>
+              <li className={styles.header__socialItem}>
                 <a
                   href="https://twitter.com"
                   target="_blank"
@@ -100,7 +102,7 @@ export function Header() {
 
           <button
             type="button"
-            className={styles.toggleBtn}
+            className={styles.header__toggleBtn}
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
