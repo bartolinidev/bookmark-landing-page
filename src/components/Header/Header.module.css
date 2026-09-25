@@ -91,7 +91,7 @@
   color: var(--clr-white);
   transition: color 0.2s ease;
 
-  &:hover {
+  &:active {
     color: var(--clr-primary-red);
   }
 }
@@ -114,7 +114,7 @@
     color 0.2s ease,
     border-color 0.2s ease;
 
-  &:hover {
+  &:active {
     background-color: var(--clr-white);
     color: var(--clr-primary-red);
   }
@@ -134,7 +134,7 @@
     display: flex;
     padding: 8px;
 
-    &:hover .header__socialIcon path {
+    &:active .header__socialIcon path {
       fill: var(--clr-primary-red);
     }
   }
@@ -143,6 +143,29 @@
 .header__socialIcon {
   & path {
     transition: fill 0.2s ease;
+  }
+}
+
+@media (hover: hover) {
+  .header__navLink {
+    &:hover {
+      color: var(--clr-primary-red);
+    }
+  }
+
+  .header__ctaButton {
+    &:hover {
+      background-color: var(--clr-white);
+      color: var(--clr-primary-red);
+    }
+  }
+
+  .header__socialItem {
+    & a {
+      &:hover .header__socialIcon path {
+        fill: var(--clr-primary-red);
+      }
+    }
   }
 }
 
@@ -189,7 +212,7 @@
     letter-spacing: 1.5px;
     color: var(--clr-neutral-dark-blue);
 
-    &:hover {
+    &:active {
       color: var(--clr-primary-red);
     }
   }
@@ -205,7 +228,7 @@
     border-color: var(--clr-primary-red);
     box-shadow: 0 3px 10px hsla(0, 94%, 66%, 0.3);
 
-    &:hover {
+    &:active {
       background-color: var(--clr-white);
       color: var(--clr-primary-red);
     }
