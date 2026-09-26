@@ -37,7 +37,7 @@ export function Faq() {
   };
 
   return (
-    <section id="contact" className={styles.faq}>
+    <section className={styles.faq}>
       <Container>
         <div className={styles.faq__header}>
           <h2 className={styles.faq__title}>Frequently Asked Questions</h2>
