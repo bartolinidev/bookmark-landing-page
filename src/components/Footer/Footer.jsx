@@ -66,12 +66,22 @@ export function Footer() {
           {/* Social media */}
           <ul className={styles.footer__socialList}>
             <li className={styles.footer__socialItem}>
-              <a href="#" aria-label="Facebook">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
                 <IconFacebook />
               </a>
             </li>
             <li className={styles.footer__socialItem}>
-              <a href="#" aria-label="Twitter">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
                 <IconTwitter />
               </a>
             </li>
