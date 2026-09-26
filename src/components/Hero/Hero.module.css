@@ -122,6 +122,11 @@
     flex: 1;
   }
 
+  .hero__image {
+    max-width: 680px;
+    width: 120%;
+  }
+
   .hero__bgShape {
     top: 28%;
     left: 20%;
