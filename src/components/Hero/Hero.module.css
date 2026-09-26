@@ -95,7 +95,6 @@
   }
 }
 
-/* Hover na desktop */
 @media (hover: hover) {
   .hero__btnPrimary:hover {
     background-color: var(--clr-white);
