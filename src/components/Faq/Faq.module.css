@@ -1,0 +1,141 @@
+.faq {
+  padding-block: 80px;
+}
+
+.faq__header {
+  text-align: center;
+  max-width: 540px;
+  margin-inline: auto;
+  margin-bottom: 56px;
+}
+
+.faq__title {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--clr-neutral-dark-blue);
+  margin-bottom: 16px;
+}
+
+.faq__description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--clr-neutral-grayish-blue);
+}
+
+.faq__accordion {
+  max-width: 540px;
+  margin-inline: auto;
+  border-top: 1px solid hsla(231, 58%, 55%, 0.2);
+}
+
+.faq__item {
+  border-bottom: 1px solid hsla(231, 58%, 55%, 0.2);
+}
+
+.faq__questionBtn {
+  width: 100%;
+  padding-block: 20px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.faq__questionText {
+  font-size: 15px;
+  color: var(--clr-neutral-dark-blue);
+  transition: color 0.2s ease;
+}
+
+.faq__icon {
+  flex-shrink: 0;
+  color: var(--clr-primary-blue);
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.faq__itemExpanded .faq__icon {
+  transform: rotate(180deg);
+  color: var(--clr-primary-red);
+}
+
+.faq__answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.faq__itemExpanded .faq__answerWrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq__answerInner {
+  overflow: hidden;
+}
+
+.faq__answerText {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--clr-neutral-grayish-blue);
+  padding-bottom: 32px;
+}
+
+.faq__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.faq__btn {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--clr-white);
+  background-color: var(--clr-primary-blue);
+  border: 2px solid var(--clr-primary-blue);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.1);
+  transition: all 0.2s ease;
+
+  &:active {
+    background-color: var(--clr-white);
+    color: var(--clr-primary-blue);
+  }
+}
+
+@media (hover: hover) {
+  .faq__questionBtn:hover .faq__questionText {
+    color: var(--clr-primary-red);
+  }
+
+  .faq__btn:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-primary-blue);
+  }
+}
+
+@media (min-width: 768px) {
+  .faq {
+    padding-block: 100px;
+  }
+
+  .faq__title {
+    font-size: 32px;
+  }
+
+  .faq__description {
+    font-size: 18px;
+  }
+
+  .faq__questionText {
+    font-size: 18px;
+  }
+}

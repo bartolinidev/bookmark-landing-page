@@ -1,0 +1,112 @@
+.newsletter {
+  background-color: var(--clr-primary-blue);
+  padding-block: 60px;
+}
+
+.newsletter__content {
+  max-width: 440px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.newsletter__counter {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  margin-bottom: 12px;
+}
+
+.newsletter__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--clr-white);
+  margin-bottom: 32px;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.newsletter__inputWrapper {
+  /* Position relative to allow absolute positioning of the error icon */
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.newsletter__inputWrapperError {
+  background-color: var(--clr-primary-red);
+  padding: 2px;
+}
+
+.newsletter__input {
+  width: 100%;
+  padding: 14px 40px 14px 20px;
+  font-size: 14px;
+  color: var(--clr-neutral-dark-blue);
+  background-color: var(--clr-white);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.newsletter__errorIcon {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+.newsletter__errorText {
+  display: block;
+  padding: 6px 12px;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  color: var(--clr-white);
+}
+
+.newsletter__btn {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--clr-white);
+  background-color: var(--clr-primary-red);
+  border: 2px solid var(--clr-primary-red);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:active {
+    background-color: var(--clr-white);
+    color: var(--clr-primary-red);
+  }
+}
+
+@media (hover: hover) {
+  .newsletter__btn:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-primary-red);
+  }
+}
+
+@media (min-width: 768px) {
+  .newsletter__form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .newsletter__inputWrapper {
+    flex: 1;
+  }
+
+  .newsletter__btn {
+    width: auto;
+  }
+}
