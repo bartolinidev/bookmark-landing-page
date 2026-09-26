@@ -41,7 +41,7 @@ export function Features() {
   const activeTab = TABS_DATA[activeTabIndex];
 
   return (
-    <section className={styles.features}>
+    <section id="features" className={styles.features}>
       <Container>
         <div className={styles.features__header}>
           <h2 className={styles.features__heading}>Features</h2>
