@@ -14,20 +14,16 @@
   z-index: 101;
 }
 
-.header__logoSvg {
-  &.header__logoSvgOpen {
-    & .header__logoCircle {
-      fill: var(--clr-white);
-    }
+.header__logoSvgOpen .header__logoCircle {
+  fill: var(--clr-white);
+}
 
-    & .header__logoBookmark {
-      fill: hsla(229, 25%, 25%, 0.95);
-    }
+.header__logoSvgOpen .header__logoBookmark {
+  fill: hsla(229, 25%, 25%, 0.95);
+}
 
-    & .header__logoText {
-      fill: var(--clr-white);
-    }
-  }
+.header__logoSvgOpen .header__logoText {
+  fill: var(--clr-white);
 }
 
 .header__toggleBtn {
@@ -46,13 +42,13 @@
   background-color: hsla(229, 25%, 25%, 0.95);
   z-index: 100;
   padding: 100px 32px 40px;
+}
 
-  &.header__navOpen {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+.header__navOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__navList {
@@ -129,43 +125,31 @@
   width: 100%;
 }
 
-.header__socialItem {
-  & a {
-    display: flex;
-    padding: 8px;
+.header__socialItem a {
+  display: flex;
+  padding: 8px;
 
-    &:active .header__socialIcon path {
-      fill: var(--clr-primary-red);
-    }
+  &:active .header__socialIcon path {
+    fill: var(--clr-primary-red);
   }
 }
 
-.header__socialIcon {
-  & path {
-    transition: fill 0.2s ease;
-  }
+.header__socialIcon path {
+  transition: fill 0.2s ease;
 }
 
 @media (hover: hover) {
-  .header__navLink {
-    &:hover {
-      color: var(--clr-primary-red);
-    }
+  .header__navLink:hover {
+    color: var(--clr-primary-red);
   }
 
-  .header__ctaButton {
-    &:hover {
-      background-color: var(--clr-white);
-      color: var(--clr-primary-red);
-    }
+  .header__ctaButton:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-primary-red);
   }
 
-  .header__socialItem {
-    & a {
-      &:hover .header__socialIcon path {
-        fill: var(--clr-primary-red);
-      }
-    }
+  .header__socialItem a:hover .header__socialIcon path {
+    fill: var(--clr-primary-red);
   }
 }
 
@@ -179,10 +163,10 @@
     position: static;
     background-color: transparent;
     padding: 0;
+  }
 
-    &.header__navOpen {
-      display: block;
-    }
+  .header__navOpen {
+    display: block;
   }
 
   .header__navList {
@@ -211,10 +195,6 @@
     font-size: 14px;
     letter-spacing: 1.5px;
     color: var(--clr-neutral-dark-blue);
-
-    &:active {
-      color: var(--clr-primary-red);
-    }
   }
 
   .header__ctaButton {
@@ -227,11 +207,6 @@
     background-color: var(--clr-primary-red);
     border-color: var(--clr-primary-red);
     box-shadow: 0 3px 10px hsla(0, 94%, 66%, 0.3);
-
-    &:active {
-      background-color: var(--clr-white);
-      color: var(--clr-primary-red);
-    }
   }
 
   .header__socialList {
