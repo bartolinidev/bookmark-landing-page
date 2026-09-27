@@ -24,7 +24,7 @@ A fully responsive landing page built with **React**, optimized for achieving hi
 
 ### Deployment
 
-- Vercel
+- **Vercel**
 
 ---
 
@@ -65,21 +65,10 @@ bookmark-landing-page/
 
 ### Installation
 
-Clone the repository, navigate to the project, install dependencies, start the development server:
-
 ```bash
-git clone https://github.com/YourUsername/bookmark-landing-page.git
-```
-
-```bash
+git clone https://github.com/bartolinidev/bookmark-landing-page.git
 cd bookmark-landing-page
-```
-
-```bash
 npm install
-```
-
-```bash
 npm run dev
 ```
 
@@ -87,59 +76,56 @@ npm run dev
 
 ## 🎯 Key Features
 
-### 📱 Fully Responsive Layout
+- Fully Responsive Layout
 
-### 🍔 Mobile Navigation
+- Mobile Navigation
 
-### 📑 Interactive Features Tabs
+- Interactive Features Tabs
 
-### ❓ Accessible FAQ Accordion
+- Accessible FAQ Accordion
 
-### ⏳ Animated Counter
+- Animated Counter
 
-### 📧 Newsletter Validation
+- Newsletter Validation
 
-### 🎉 Conversion Modal
-
-Popup modal triggered by two engagement mechanisms:
-
-1. Exit Intent Detection
-2. Automatic trigger after 30 seconds
+- Modal on Exit-Intent & Timeout
 
 ---
 
-## ⚡ Performance Focus
+## ⚡ Performance
 
-The project was built with a strong focus on:
+The project was created with a focus on accessibility, performance, and responsiveness.
 
-- Core Web Vitals
-- Accessibility
-- Responsive Design
-- Maintainable Architecture
-- Component Reusability
+Check it yourself by pasting the project link on the [PageSpeed Insights website](https://pagespeed.web.dev/) and click "Analyze" button.
+
+![Lighthouse Score](public/core-web-vitals.png)
 
 ---
 
-## 🔮 Future Enhancements
+## 🔮 Areas to improve
 
 ### Navigation Improvements
 
-Standardize section identifiers and navigation links for smoother scrolling experience.
+Standardize section identifiers and navigation links for better UX and DX.
 
-### 🌙 Native Dark Mode
+### Native Dark Mode
 
-Implement automatic system theme detection using:
+Implement automatic system theme detection using native CSS features:
 
 ```css
-color-scheme: light dark;
+:root {
+  color-scheme: light dark;
+}
+
+.element {
+  color: light-dark(black, white);
+  background-color: light-dark(white, black);
+}
 ```
 
-### 🔗 Backend Integration
+### Backend Integration
 
 Connect the newsletter form to a backend API such as:
 
-- Node.js
-- Express.js
+- Node / Express.js
 - express-validator
-
-for real subscription handling and server-side validation.
