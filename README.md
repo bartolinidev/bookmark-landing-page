@@ -1,16 +1,145 @@
-# React + Vite
+# 🔖 Bookmark Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive landing page built with **React**, optimized for achieving high **Core Web Vitals** results.
 
-Currently, two official plugins are available:
+🌐 **Live Demo: [Click!](https://bookmark-landing-page-psi-eight.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Technologies & Methodologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Environment
 
-## Expanding the ESLint configuration
+- **Vite**
+- **React**
+  - Functional Components
+  - `useState`
+  - `useEffect`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Styling
+
+- **CSS Modules**
+- **BEM Methodology**
+- **Mobile-first**
+
+### Deployment
+
+- Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
+bookmark-landing-page/
+├── public/
+├── src/
+│   ├── assets/
+│   │   ├── fonts/
+│   │   └── images/
+│   ├── components/
+│   │   ├── Container/
+│   │   ├── Extension/
+│   │   ├── Faq/
+│   │   ├── Features/
+│   │   ├── Footer/
+│   │   ├── Header/
+│   │   ├── Hero/
+│   │   ├── icons/
+│   │   ├── Modal/
+│   │   └── Newsletter/
+│   ├── App.jsx
+│   ├── global.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js
+```
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+
+Clone the repository, navigate to the project, install dependencies, start the development server:
+
+```bash
+git clone https://github.com/YourUsername/bookmark-landing-page.git
+```
+
+```bash
+cd bookmark-landing-page
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+---
+
+## 🎯 Key Features
+
+### 📱 Fully Responsive Layout
+
+### 🍔 Mobile Navigation
+
+### 📑 Interactive Features Tabs
+
+### ❓ Accessible FAQ Accordion
+
+### ⏳ Animated Counter
+
+### 📧 Newsletter Validation
+
+### 🎉 Conversion Modal
+
+Popup modal triggered by two engagement mechanisms:
+
+1. Exit Intent Detection
+2. Automatic trigger after 30 seconds
+
+---
+
+## ⚡ Performance Focus
+
+The project was built with a strong focus on:
+
+- Core Web Vitals
+- Accessibility
+- Responsive Design
+- Maintainable Architecture
+- Component Reusability
+
+---
+
+## 🔮 Future Enhancements
+
+### Navigation Improvements
+
+Standardize section identifiers and navigation links for smoother scrolling experience.
+
+### 🌙 Native Dark Mode
+
+Implement automatic system theme detection using:
+
+```css
+color-scheme: light dark;
+```
+
+### 🔗 Backend Integration
+
+Connect the newsletter form to a backend API such as:
+
+- Node.js
+- Express.js
+- express-validator
+
+for real subscription handling and server-side validation.
