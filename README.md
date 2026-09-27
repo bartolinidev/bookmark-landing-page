@@ -1,30 +1,30 @@
-# 🔖 Bookmark Landing Page
+# Bookmark Landing Page
 
 A fully responsive landing page built with **React**, optimized for achieving high **Core Web Vitals** results.
 
-🌐 **Live Demo: [Click!](https://bookmark-landing-page-psi-eight.vercel.app/)**
+**🌐 Live Demo: [Click!](https://bookmark-landing-page-psi-eight.vercel.app/)**
 
 ---
 
-## ✨ Technologies & Methodologies
+## 🏗️ Technologies & Tools
 
 ### Environment
 
-- **Vite**
-- **React**
+- Vite
+- React
   - Functional Components
   - `useState`
   - `useEffect`
 
 ### Styling
 
-- **CSS Modules**
-- **BEM Methodology**
-- **Mobile-first**
+- CSS Modules
+- BEM Methodology
+- Mobile-first
 
 ### Deployment
 
-- **Vercel**
+- Vercel
 
 ---
 
@@ -61,7 +61,7 @@ bookmark-landing-page/
 
 ---
 
-## 🚀 Getting Started
+## 💻 Getting Started
 
 ### Installation
 
@@ -74,7 +74,7 @@ npm run dev
 
 ---
 
-## 🎯 Key Features
+## ✨ Key Features
 
 - Fully Responsive Layout
 
@@ -82,7 +82,7 @@ npm run dev
 
 - Interactive Features Tabs
 
-- Accessible FAQ Accordion
+- FAQ Accordion
 
 - Animated Counter
 
@@ -92,7 +92,7 @@ npm run dev
 
 ---
 
-## ⚡ Performance
+## ✅ Performance
 
 The project was created with a focus on accessibility, performance, and responsiveness.
 
@@ -102,7 +102,7 @@ Check it yourself by pasting the project link on the [PageSpeed Insights website
 
 ---
 
-## 🔮 Areas to improve
+## ↗️ Areas to improve
 
 ### Navigation Improvements
 
