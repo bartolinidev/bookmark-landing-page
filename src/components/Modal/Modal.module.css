@@ -1,0 +1,139 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.content {
+  position: relative;
+  background-color: var(--clr-white);
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  padding: 40px 24px 32px;
+  box-shadow: 0 10px 25px hsla(0, 0%, 0%, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: invert();
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 24px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--clr-neutral-dark-blue);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--clr-neutral-grayish-blue);
+  margin-bottom: 24px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.btnPrimary,
+.btnSecondary {
+  display: inline-block;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.08);
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.btnPrimary {
+  background-color: var(--clr-primary-blue);
+  color: var(--clr-white);
+  border: 2px solid var(--clr-primary-blue);
+
+  &:active {
+    background-color: var(--clr-white);
+    color: var(--clr-primary-blue);
+  }
+}
+
+.btnSecondary {
+  background-color: hsl(0, 0%, 97%);
+  color: var(--clr-neutral-dark-blue);
+  border: 2px solid hsl(0, 0%, 97%);
+
+  &:active {
+    background-color: var(--clr-white);
+    border-color: var(--clr-neutral-dark-blue);
+  }
+}
+
+@media (hover: hover) {
+  .btnPrimary:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-primary-blue);
+  }
+
+  .btnSecondary:hover {
+    background-color: var(--clr-white);
+    border-color: var(--clr-neutral-dark-blue);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

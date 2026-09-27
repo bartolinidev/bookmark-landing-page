@@ -5,6 +5,7 @@ import { Extension } from './components/Extension/Extension';
 import { Faq } from './components/Faq/Faq';
 import { Newsletter } from './components/Newsletter/Newsletter';
 import { Footer } from './components/Footer/Footer';
+import { Modal } from './components/Modal/Modal';
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
         <Extension />
         <Faq />
         <Newsletter />
-        <Footer />
-        {/* kolejne sekcje */}
       </main>
+      <Footer />
+      <Modal />
     </>
   );
 }
