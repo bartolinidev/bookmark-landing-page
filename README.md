@@ -6,7 +6,7 @@ A fully responsive landing page built with **React**, optimized for achieving hi
 
 ---
 
-## 🏗️ Technologies & Tools
+## ⚛️ Technologies & Tools
 
 ### Environment
 
@@ -61,7 +61,7 @@ bookmark-landing-page/
 
 ---
 
-## 💻 Getting Started
+## 🔰 Getting Started
 
 ### Installation
 
@@ -74,7 +74,7 @@ npm run dev
 
 ---
 
-## ✨ Key Features
+## ✴️ Key Features
 
 - Fully Responsive Layout
 
