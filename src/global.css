@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'Rubik';
-  src: url('./assets/fonts/Rubik-Regular.ttf') format('truetype');
+  src: url('/fonts/Rubik-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('./assets/fonts/Rubik-Medium.ttf') format('truetype');
+  src: url('/fonts/Rubik-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 html {
   scroll-behavior: smooth;
