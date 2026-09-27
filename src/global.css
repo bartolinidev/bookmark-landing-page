@@ -60,6 +60,11 @@ body {
   color: var(--clr-neutral-grayish-blue);
   background-color: var(--clr-white);
   overflow-x: hidden;
+  /* Bg scroll prevention when mobile menu is open */
+  &.no-scroll {
+    overflow-y: hidden;
+    touch-action: none;
+  }
 }
 h1,
 h2,
