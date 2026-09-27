@@ -88,7 +88,7 @@ npm run dev
 
 - Newsletter Validation
 
-- Modal on Exit-Intent & Timeout
+- Modal on mouseleave top & Timeout
 
 ---
 
