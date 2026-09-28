@@ -36,7 +36,7 @@ bookmark-landing-page/
 │   └── fonts/
 ├── src/
 │   ├── assets/
-│   │   images/
+│   │   └── images/
 │   ├── components/
 │   │   ├── Container/
 │   │   ├── Extension/
