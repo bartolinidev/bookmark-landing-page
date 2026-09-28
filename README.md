@@ -33,10 +33,10 @@ A fully responsive landing page built with **React**, optimized for achieving hi
 ```text
 bookmark-landing-page/
 ├── public/
+│   └── fonts/
 ├── src/
 │   ├── assets/
-│   │   ├── fonts/
-│   │   └── images/
+│   │   images/
 │   ├── components/
 │   │   ├── Container/
 │   │   ├── Extension/
@@ -96,7 +96,7 @@ npm run dev
 
 The project was created with a focus on accessibility, performance, and responsiveness.
 
-Check it yourself by pasting the project link on the [PageSpeed Insights website](https://pagespeed.web.dev/) and click "Analyze" button.
+Check it yourself by pasting the live preview's URL on the [PageSpeed Insights website](https://pagespeed.web.dev/) and click "Analyze" button.
 
 ![Lighthouse Score](public/core-web-vitals.png)
 
