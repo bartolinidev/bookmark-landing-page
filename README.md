@@ -33,10 +33,10 @@ A fully responsive landing page built with **React**, optimized for achieving hi
 ```text
 bookmark-landing-page/
 ├── public/
+│   └── fonts/
 ├── src/
 │   ├── assets/
-│   │   ├── fonts/
-│   │   └── images/
+│   │   images/
 │   ├── components/
 │   │   ├── Container/
 │   │   ├── Extension/
