@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Container } from '../Container/Container';
 import styles from './Newsletter.module.css';
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
 export function Newsletter() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -21,9 +23,6 @@ export function Newsletter() {
 
     return () => clearInterval(interval);
   }, []);
-
-  // E-mail validation
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
   const handleSubmit = (e) => {
     e.preventDefault();
