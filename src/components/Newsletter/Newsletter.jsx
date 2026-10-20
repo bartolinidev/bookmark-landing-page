@@ -7,16 +7,21 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 export function Newsletter() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  const [count, setCount] = useState(35000);
+  const [count, setCount] = useState(0);
 
-  // Countdown 35000 to 0 in 20 sec
+  // Countdown 0 to 35000 in 20 sec
+  const finish = 35000;
+  const timer = 20000;
+
   useEffect(() => {
     const startTime = Date.now();
     const interval = setInterval(() => {
       const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / 20000, 1);
+      const progress = Math.min(elapsed / timer, 1);
 
-      setCount(Math.floor(35000 * (1 - progress)));
+      let newCount = Math.floor((finish / timer) * elapsed);
+      if (newCount > finish) newCount = finish;
+      setCount(newCount);
 
       if (progress >= 1) clearInterval(interval);
     }, 50);
