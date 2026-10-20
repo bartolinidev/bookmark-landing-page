@@ -37,7 +37,7 @@ export function Header() {
       document.body.classList.remove('no-scroll');
     }
 
-    // Cleanup przy odpięciu komponentu
+    // Cleanup on unmount
     return () => {
       document.body.classList.remove('no-scroll');
     };
