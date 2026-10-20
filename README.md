@@ -88,7 +88,7 @@ npm run dev
 
 - Newsletter Validation
 
-- Modal on mouseleave top & Timeout
+- Modal on Mouseleave top & Timeout
 
 ---
 
@@ -104,24 +104,9 @@ Check it yourself by pasting the live preview's URL on the [PageSpeed Insights w
 
 ## ↗️ Areas to improve
 
-### Navigation Improvements
-
-Standardize section identifiers and navigation links for better UX and DX.
-
 ### Native Dark Mode
 
-Implement automatic system theme detection using native CSS features:
-
-```css
-:root {
-  color-scheme: light dark;
-}
-
-.element {
-  color: light-dark(black, white);
-  background-color: light-dark(white, black);
-}
-```
+Implement automatic system theme detection
 
 ### Backend Integration
 
