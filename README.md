@@ -1,6 +1,6 @@
 # Bookmark Landing Page
 
-A fully responsive landing page built with **React**, optimized for achieving high **Core Web Vitals** results.
+A fully responsive landing page built with **React**, optimized for achieving high Core Web Vitals results, featuring robust WCAG-compliant accessibility (A11y) and seamless keyboard navigation.
 
 **🌐 Live Demo: [Click!](https://bookmark-landing-page-psi-eight.vercel.app/)**
 
@@ -15,6 +15,7 @@ A fully responsive landing page built with **React**, optimized for achieving hi
   - Functional Components
   - `useState`
   - `useEffect`
+  - `useRef`
 
 ### Styling
 
