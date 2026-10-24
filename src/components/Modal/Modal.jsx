@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from './Modal.module.css';
 
 import tab2Image from '../../assets/images/illustration-features-tab-2.svg';
@@ -9,6 +9,7 @@ export function Modal() {
   // Ensures only 1 modal pop out per type
   const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const [hasExitOpened, setHasExitOpened] = useState(false);
+  const dialogRef = useRef(null);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -44,6 +45,28 @@ export function Modal() {
     };
   }, [hasExitOpened]);
 
+  // Synchro React state with native tag <dialog>
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    if (isOpen && !dialog.open) {
+      dialog.showModal();
+    } else if (!isOpen && dialog.open) {
+      dialog.close();
+    }
+  }, [isOpen]);
+
+  // Service of native close (i.e. Esc btn)
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const markClosed = () => setIsOpen(false);
+    dialog.addEventListener('close', markClosed);
+    return () => dialog.removeEventListener('close', markClosed);
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add('no-scroll');
@@ -59,53 +82,50 @@ export function Modal() {
   if (!isOpen) return null;
 
   return (
-    <div
-      className={styles.overlay}
-      role="dialog"
-      aria-modal="true"
+    <dialog
+      ref={dialogRef}
+      className={styles.content}
       aria-labelledby="modal-title"
     >
-      <div className={styles.content} onClick={(e) => e.stopPropagation()}>
-        <button
-          type="button"
-          className={styles.closeBtn}
-          onClick={closeModal}
-          aria-label="Close modal"
-        >
-          <img src={iconClose} alt="" aria-hidden="true" />
-        </button>
+      <button
+        type="button"
+        className={styles.closeBtn}
+        onClick={closeModal}
+        aria-label="Close modal"
+      >
+        <img src={iconClose} alt="" aria-hidden="true" />
+      </button>
 
-        <div className={styles.imageWrapper}>
-          <img src={tab2Image} alt="Intelligent Search illustration" />
-        </div>
+      <div className={styles.imageWrapper}>
+        <img src={tab2Image} alt="Intelligent Search illustration" />
+      </div>
 
-        <div className={styles.textContent}>
-          <h2 id="modal-title" className={styles.title}>
-            Intelligent Search
-          </h2>
-          <p className={styles.description}>
-            Our powerful search feature will help you find saved sites in no
-            time at all. No need to trawl through all of your bookmarks.
-          </p>
+      <div className={styles.textContent}>
+        <h2 id="modal-title" className={styles.title}>
+          Intelligent Search
+        </h2>
+        <p className={styles.description}>
+          Our powerful search feature will help you find saved sites in no time
+          at all. No need to trawl through all of your bookmarks.
+        </p>
 
-          <div className={styles.actions}>
-            <button
-              type="button"
-              className={styles.btnPrimary}
-              onClick={closeModal}
-            >
-              Take Action
-            </button>
-            <button
-              type="button"
-              className={styles.btnSecondary}
-              onClick={closeModal}
-            >
-              Maybe Later
-            </button>
-          </div>
+        <div className={styles.actions}>
+          <button
+            type="button"
+            className={styles.btnPrimary}
+            onClick={closeModal}
+          >
+            Take Action
+          </button>
+          <button
+            type="button"
+            className={styles.btnSecondary}
+            onClick={closeModal}
+          >
+            Maybe Later
+          </button>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }
