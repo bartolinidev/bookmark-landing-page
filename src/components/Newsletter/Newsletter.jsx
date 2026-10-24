@@ -70,6 +70,9 @@ export function Newsletter() {
                   setEmail(e.target.value);
                   setError(''); // Clear error while typing
                 }}
+                aria-label="Email address"
+                aria-invalid={Boolean(error)}
+                aria-describedby={error ? 'email-error' : undefined}
               />
 
               {/* Conditional error icon display */}
@@ -78,6 +81,7 @@ export function Newsletter() {
                   className={styles.newsletter__errorIcon}
                   width="20"
                   height="20"
+                  aria-hidden="true"
                 >
                   <g fill="none" fillRule="evenodd">
                     <circle cx="10" cy="10" r="10" fill="hsl(0, 94%, 67%)" />
@@ -103,7 +107,13 @@ export function Newsletter() {
 
               {/* Error message - conditionally */}
               {error && (
-                <span className={styles.newsletter__errorText}>{error}</span>
+                <span
+                  id="email-error"
+                  role="alert"
+                  className={styles.newsletter__errorText}
+                >
+                  {error}
+                </span>
               )}
             </div>
 
