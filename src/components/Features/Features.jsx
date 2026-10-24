@@ -40,6 +40,23 @@ export function Features() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const activeTab = TABS_DATA[activeTabIndex];
 
+  const handleKeyDown = (e, index) => {
+    let newIndex = index;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      newIndex = (index + 1) % TABS_DATA.length;
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      newIndex = (index - 1 + TABS_DATA.length) % TABS_DATA.length;
+    } else {
+      return;
+    }
+
+    e.preventDefault();
+
+    setActiveTabIndex(newIndex);
+    const nextTabButton = document.getElementById(TABS_DATA[newIndex].id);
+    if (nextTabButton) nextTabButton.focus();
+  };
+
   return (
     <section id="features" className={styles.features}>
       <Container>
@@ -59,9 +76,12 @@ export function Features() {
             return (
               <button
                 key={tab.id}
+                id={tab.id}
                 type="button"
                 role="tab"
                 aria-selected={isActive}
+                aria-controls={tab.panelId}
+                tabIndex={isActive ? 0 : -1}
                 className={`${styles.features__tabBtn} ${
                   isActive ? styles.features__tabBtnActive : ''
                 }`}
@@ -74,7 +94,12 @@ export function Features() {
         </div>
 
         {/* activeTab content */}
-        <div className={styles.features__content}>
+        <div
+          id={activeTab.panelId}
+          role="tabpanel"
+          aria-labelledby={activeTab.id}
+          className={styles.features__content}
+        >
           <div className={styles.features__imageContainer}>
             <img
               src={activeTab.image}
