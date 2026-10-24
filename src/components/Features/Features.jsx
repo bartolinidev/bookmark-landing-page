@@ -9,6 +9,7 @@ import tab3Img from '../../assets/images/illustration-features-tab-3.svg';
 const TABS_DATA = [
   {
     id: 'tab-1',
+    panelId: 'features-panel-1',
     label: 'Simple Bookmarking',
     title: 'Bookmark in one click',
     description:
@@ -18,6 +19,7 @@ const TABS_DATA = [
   },
   {
     id: 'tab-2',
+    panelId: 'features-panel-2',
     label: 'Speedy Searching',
     title: 'Intelligent search',
     description:
@@ -27,6 +29,7 @@ const TABS_DATA = [
   },
   {
     id: 'tab-3',
+    panelId: 'features-panel-3',
     label: 'Easy Sharing',
     title: 'Share your bookmarks',
     description:
@@ -86,6 +89,7 @@ export function Features() {
                   isActive ? styles.features__tabBtnActive : ''
                 }`}
                 onClick={() => setActiveTabIndex(index)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
               >
                 {tab.label}
               </button>
