@@ -68,11 +68,13 @@
 .faq__answerWrapper {
   display: grid;
   grid-template-rows: 0fr;
+  visibility: hidden;
   transition: grid-template-rows 0.3s ease-out;
 }
 
 .faq__itemExpanded .faq__answerWrapper {
   grid-template-rows: 1fr;
+  visibility: visible;
 }
 
 .faq__answerInner {
